@@ -7,10 +7,17 @@ $(document).ready(function() {
     var season = $("input:radio[name=season]:checked").val();
 
     if (height === "min" && color === "yellow" && diet === "vegan") {
-      $(".pleosaur").show().fadeIn();
+      $(".mr-t").fadeOut();
+      $(".lebrontosaurus").fadeOut();
+      $(".pleosaur").fadeIn();
     } else if (height === "max" && color === "yellow" && diet === "omnivore" && season === "summer") {
-      $(".lebrontosaurus").show().fadeIn();
-      console.log("show")
+      $(".mr-t").fadeOut();
+      $(".pleosaur").fadeOut();
+      $(".lebrontosaurus").fadeIn();
+    }else {
+      $(".lebrontosaurus").fadeOut();
+      $(".pleosaur").fadeOut();
+      $(".mr-t").fadeIn();
     }
     event.preventDefault();
   });
